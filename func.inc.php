@@ -571,7 +571,7 @@ function process_host_disp($desmhash, $summary_data_array, $dev_data_array)
       $difficulty = (int) ($Diff1Accept/$accepted);
       
       $rejects = $summary_data_array['SUMMARY'][0]['Pool Rejected%'] . " %";
-      $discards = round(100 / $getworks * $discarded, 1) . " %";
+      $discards = round(100 / $accepted * $discarded, 1) . " %";
       $stales = $summary_data_array['SUMMARY'][0]['Pool Stale%'] . " %";
       $getfails = round(100 / $accepted * $getfail, 1) . " %";
       $remfails = round(100 / $accepted * $remfail, 1) . " %";
